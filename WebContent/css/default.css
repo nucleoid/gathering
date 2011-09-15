@@ -1,0 +1,203 @@
+body,html {
+	margin: 0;
+	padding: 0;
+	background: #F0F8FF;
+	color: #000;
+	height: 100%;
+}
+
+#header {
+	width: 100%;
+	background: #ddd;
+	border: 1px solid #000;
+	margin-top: 2px;
+	margin-right: 0;
+	margin-bottom: 2px;
+	margin-left: 2px;;
+	margin-right: 0;
+}
+
+html>body #content-wrap {
+	height: 100%;
+}  /* 100 % height */
+html>body #content {
+	padding: 1em 1em;
+	margin-bottom: 1.4em;
+}
+
+#header h1 {
+	font-size: 2em;
+	padding: 5px;
+	margin: 0px;
+}
+
+#footer {
+	width: 95%;
+	height: 1.4em;
+	background: #ddd;
+	clear: both;
+}
+
+#footer p {
+	padding: 5px;
+	margin: 0;
+}
+
+html>body #footer {
+	position: fixed;
+	bottom: 0;
+	z-index: 10; /* Prevent certain problems with form controls */
+}
+
+#menu {
+	margin-top: 3px;
+	margin-right: 0;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	width: auto;
+	height: auto;
+}
+
+#menu span {
+	margin: 0;
+	padding: 0;
+}
+
+#menu span a {
+	text-decoration: none;
+	display: inline;
+	color: #d4d5a1;
+	width: 90%;
+	text-align: center;
+	border: 2px solid #666666;
+	background: #4682B4;
+	margin: 0;
+	padding: 0;
+}
+
+#menu span a:hover {
+	color: #000000;
+	background: #c60;;
+}
+
+#content {
+	background: #F0F8FF;
+	width: 95%;
+}
+
+#forms {
+	padding: 0;
+}
+
+#itemEntry {
+	float: left;
+}
+
+#eventEntry {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 1em;
+	float: left;
+}
+
+#eventForm a img {
+	border: 0;
+}
+
+#brought {
+	clear: left;
+}
+
+#schedule {
+
+}
+
+.odd {
+	background: #69C;
+}
+
+.even {
+	background: #6CF;
+}
+
+#wrapper {
+	width: 95%;
+}
+
+div.autocomplete {
+	width: auto;
+	background: #fff;
+}
+
+div.autocomplete ul {
+	border: 1px solid #888;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+}
+
+div.autocomplete ul li {
+	margin: 0;
+	padding: 3px;
+}
+
+div.autocomplete ul li.selected {
+	background-color: #ffb;
+}
+
+div.autocomplete ul strong.highlight {
+	color: #800;
+	margin: 0;
+	padding: 0;
+}
+
+div.commentHeader {
+	background-color:#EDEDDB;
+	font-size: 1em;
+	padding: 0.5em;
+	margin-top: 1em;
+	margin-right: 1em;
+	text-align:left;
+}
+
+div.commentBody {
+	font-size: 1em;
+	margin-right: 1em;
+	text-align:left;
+}
+
+#commentForm {
+	padding-bottom: 1.5em;
+}
+
+.active a{
+	text-decoration: none;
+	display: inline;
+	color: #999999;
+	width: 90%;
+	text-align: center;
+	border: 2px solid #666666;
+	background: #4682B4;
+	margin: 0;
+	padding: 0;
+}
+
+.pseudoButton {
+	float: left;
+	color: #d4d5a1;
+	text-align: center;
+	border: 2px solid #666666;
+	background: #4682B4;
+	margin: 0;
+	padding: 0;
+}
+
+#listNotes {
+	clear: left;	
+}
+
+.comments {
+	clear: left;	
+}

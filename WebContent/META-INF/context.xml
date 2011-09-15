@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--password="postPassword1" -->
+<Context reloadable="true" debug="true" allowLinking="true">
+    <Resource name="jdbc/gatherings"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql:gathering"
+        username="statzgathering"
+        password="p0stgr3s"
+        validationQuery="select now()"
+        maxWait="1000"
+        removeAbandoned="true"
+        maxActive="8"
+        maxIdle="4"
+        removeAbandonedTimeout="60"
+        logAbandoned="true"/>
+</Context>
