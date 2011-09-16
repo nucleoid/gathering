@@ -13,15 +13,15 @@
 <h3>Enter a question, answer, comment, or anything you want to be displayed here.</h3>
 <div id="commentForm">
 
-<stripes:form name="comment" id="comment" focus="entry.name" beanclass="statz.controller.CommentAction">
+<stripes:form name="comment" id="comment" action="/action/Comment">
 <table>
 <tr>
 <tr>
-<td>Name*</td><td><stripes:text name="entry.name" id="entry.name" maxlength="50" size="30" value="" onfocus="javascript: new Ajax.Autocompleter(this, 'autocomplete_name', '/gathering/action/Entry?nameList', {paramName: 'value', minChars: 2, indicator: 'indicator1'});"/><span id="indicator1" style="display: none"><img src="/gathering/img/spinner.gif" alt="Working..." /></span>
-	<div id="autocomplete_name" class="autocomplete"></div><stripes:errors field="entry.name" /></td>
+<td>Name*</td><td><stripes:text name="entryComment.name" id="entryComment.name" maxlength="50" size="30" value="" onfocus="javascript: new Ajax.Autocompleter(this, 'autocomplete_name', '/gathering/action/Entry?nameList', {paramName: 'value', minChars: 2, indicator: 'indicator1'});"/><span id="indicator1" style="display: none"><img src="/gathering/img/spinner.gif" alt="Working..." /></span>
+	<div id="autocomplete_name" class="autocomplete"></div><stripes:errors field="entryComment.name" /></td>
 </tr>
 <tr>
-<td>Content</td><td><stripes:text name="entry.comment"></stripes:text><stripes:errors field="entryThing.name"/><stripes:errors field="entry.comment" /></td>
+<td>Content</td><td><stripes:text name="entryComment.comment"></stripes:text><stripes:errors field="entryComment.comment" /></td>
 </tr>
 <tr>
 <tr>

@@ -19,7 +19,7 @@ import statz.model.survey.Response;
 
 import com.mongus.stripes.HibernateProvider;
 
-@UrlBinding("/Survey.action")
+@UrlBinding("/action/Survey")
 public class SurveyAction extends BaseAction {
 
 	private static final Log log = Log.getInstance(CommentAction.class);
@@ -34,7 +34,7 @@ public class SurveyAction extends BaseAction {
 		if (login()) {
 			return new ForwardResolution("/WEB-INF/jsp/survey.jsp");
 		} else {
-			return new ForwardResolution("Index.action");
+			return new ForwardResolution("/action/Index");
 		}
 	}
 
@@ -52,7 +52,7 @@ public class SurveyAction extends BaseAction {
 		HibernateProvider.getInstance().commit();
 		log.info("Entered a survey answer with contents: " + getResponse().toString());
 		setSuccess(true);
-		return new RedirectResolution("/Survey.action").flash(this);
+		return new RedirectResolution("/action/Survey").flash(this);
 	}
 
 	public Response getResponse() {

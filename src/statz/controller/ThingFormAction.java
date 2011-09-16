@@ -3,12 +3,14 @@ package statz.controller;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.Validate;
 import net.sourceforge.stripes.validation.ValidateNestedProperties;
 import statz.model.Thing;
 
 import com.mongus.stripes.HibernateProvider;
 
+@UrlBinding("/action/ThingForm")
 public class ThingFormAction extends BaseAction {
 
 	@ValidateNestedProperties({
@@ -23,10 +25,6 @@ public class ThingFormAction extends BaseAction {
 	@HandlesEvent("saveThing")
 	public Resolution saveThing()
 	{
-		Boolean dropDown = itemDropDown == -1;
-		if(!dropDown) {
-			entryThing.setId(itemDropDown);
-		}
 		if (getEntryThing().getId() == null) {
 			getSession().save(entryThing);
 		}
@@ -38,7 +36,7 @@ public class ThingFormAction extends BaseAction {
 			getSession().update(entryThing);
 		}
 		HibernateProvider.getInstance().commit();
-		return new RedirectResolution("/List.action");
+		return new RedirectResolution("/action/List");
 	}
 	
 	public Thing getEntryThing() {

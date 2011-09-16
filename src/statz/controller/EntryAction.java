@@ -7,9 +7,9 @@ import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 import statz.model.Thing;
 
-@UrlBinding("/Entry.action")
+@UrlBinding("/action/Entry")
 public class EntryAction extends BaseAction {
-	
+	private Thing entryThing = new Thing();
 	@DefaultHandler
 	public Resolution authenticated() {
 		if(login()) {
@@ -17,7 +17,7 @@ public class EntryAction extends BaseAction {
 			setEvents(getEventList());
 			return new ForwardResolution("/WEB-INF/jsp/entry.jsp");
 		} else {
-			return new ForwardResolution("Index.action");
+			return new ForwardResolution("/action/Index");
 		}
 	}
 	
@@ -30,4 +30,11 @@ public class EntryAction extends BaseAction {
 		}
 	}
 	
+	public Thing getEntryThing() {
+		return entryThing;
+	}
+
+	public void setEntryThing(Thing entryThing) {
+		this.entryThing = entryThing;
+	}
 }

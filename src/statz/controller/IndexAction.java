@@ -7,13 +7,13 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.SimpleError;
 
-@UrlBinding("/Index.action")
+@UrlBinding("/action/Index")
 public class IndexAction extends BaseAction {
 	
 	@DefaultHandler
     public Resolution authenticate() {
 		if(login()) {
-			return new RedirectResolution("/List.action");
+			return new RedirectResolution("/action/List");
 		} else {
 			if(getContext().getRequest().getSession().getAttribute("username") != null) {
 				getContext().getValidationErrors().addGlobalError(

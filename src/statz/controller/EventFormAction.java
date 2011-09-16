@@ -27,7 +27,7 @@ public class EventFormAction extends BaseAction {
 			getSession().save(entryEvent);
 		}
 		HibernateProvider.getInstance().commit();
-		return new RedirectResolution("/List.action");
+		return new RedirectResolution("/action/List");
 	}
 
 	public Event getEntryEvent() {

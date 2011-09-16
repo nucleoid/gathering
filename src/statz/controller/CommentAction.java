@@ -17,7 +17,7 @@ import statz.model.Comment;
 
 import com.mongus.stripes.HibernateProvider;
 
-@UrlBinding("/Comment.action")
+@UrlBinding("/action/Comment")
 public class CommentAction extends BaseAction {
 
 	private static final Log log = Log.getInstance(CommentAction.class);
@@ -32,19 +32,17 @@ public class CommentAction extends BaseAction {
 		if(login()) {
 			return new ForwardResolution("/WEB-INF/jsp/comments.jsp");
 		} else {
-			return new ForwardResolution("Index.action");
+			return new ForwardResolution("/action/Index");
 		}
 	}
 	
 	@HandlesEvent("saveComment")
 	public Resolution saveComment() {
-		if (getEntryComment().getId() == null) {
 			getEntryComment().setPostDate(new Date());
 			getSession().save(entryComment);
-		}
 		HibernateProvider.getInstance().commit();
 		log.info("Entered a comment with contents: " +getEntryComment());
-		return new RedirectResolution("/Comment.action");
+		return new RedirectResolution("/action/Comment");
 	}
 
 	public Comment getEntryComment() {
