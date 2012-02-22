@@ -57,8 +57,7 @@
         <init-param>
             <param-name>Interceptor.Classes</param-name>
 		    <param-value>
-		        com.mongus.stripes.HibernateInterceptor,
-        		net.sourceforge.stripes.controller.BeforeAfterMethodInterceptor
+		        com.mongus.stripes.HibernateInterceptor
 		    </param-value>
 		</init-param>
 		
@@ -108,4 +107,3 @@
        <taglib-location>/WEB-INF/tld/jmesa.tld</taglib-location>
     </taglib>
 </web-app>
-

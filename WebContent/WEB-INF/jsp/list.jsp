@@ -30,7 +30,7 @@ need to be claimed by someone.
             <jmesa:htmlRow highlighter="false">    
 				<jmesa:htmlColumn property="whenUsed" title="When Used" />
                 <jmesa:htmlColumn property="name" title="Name">
-					<!-- <a href="/gathering/action/Entry/${thing.id}">${thing.name}</a> -->${thing.name}
+					<a href="/gathering/action/Entry?entryThing=${thing.id}">${thing.name}</a>
 				</jmesa:htmlColumn>
                 <jmesa:htmlColumn property="owner" title="Owner" />
                 <jmesa:htmlColumn property="quantity" title="Quantity" />
